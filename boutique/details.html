@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2XBSDLFQZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-M2XBSDLFQZ');
+    </script>
+
+    <!-- Meta tags for social media -->
+    <meta property="og:title" content="Cours Anglais pour debutant">
+    <meta property="og:description" content="Apprendre l'Anglais chaque jour et pratiquer avec nous gratuitement.">
+    <meta property="og:image" content="/images/p formation.png" id="ogImage">
+    <meta property="og:url" id="ogurl" content="">
+    <meta name="keywords" content="Cours anglais, pratique anglais, grammaire anglais, expressions anglais .">
+
+    <!-- Stylesheets -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zruApR6S1gbL0OeSqjrFYseztvotdAyMBwK9aaVg6AeY3I4Wl9PrtQ/kOcvtO1PnwYFqxu3MNSXfs3lEpxdumQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="details.css">
+
+    <!-- Google Ads and other scripts -->
+    <script async src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7979799450178267" crossorigin="anonymous"></script>
+
+    <title id="dynamicTitle"></title>
+</head>
+<body>
+    <div class="container">
+        <!-- Configuration de mon site web -->
+        <section>
+            <menu id="splash-screen"></menu>
+            <menu id="menu"></menu>
+            <div id="customDialog" class="alert"></div>
+            <div class="formulaire"></div>
+            <footer class="mobile-footer"></footer>
+            <div class="placement">
+                <div class="usersdetails" id="userDetails"></div>
+            </div>
+        </section>
+    
+        <div class="content">
+            <main>
+                
+                <div id="details-container" class="article">
+                    <img id="imageshow" src="" alt="" style="display: none;">
+                    <img id="img" src="" alt="">
+                    <h1 id="title"></h1>
+                    <p id="soustitle"></p>
+                    <p><span id="prix"></span> Rc</p>
+                    <p id="details"></p>
+                    <p style="display: none;" id="lien"></p>
+                   
+    
+                    <!-- Mes boutons -->
+                    <div class="barlike">
+                        <div class="btncomment like">
+                            <i class="fa fa-comment"></i>
+                            <span class="count" id="commentcount"></span>
+                        </div>
+                        <div class="btnlike like">
+                            <button onclick="likebtn()"><i class="fa fa-heart"></i></button>
+                            <span id="likecount"></span>
+                        </div>
+                        <div class="btnlike download">
+                            <p><i class="fa fa-download"></i></p>
+                            <span id="download"></span>
+                        </div>
+                        <button onclick="share()" class="share"><i class="fa fa-whatsapp"></i></button>
+                        <button onclick="telecharger()">Télécharger</button>
+                    </div>
+    
+                    <!-- Espace commentaire -->
+                    <div class="commentSection" style="display:block;">
+                        <textarea id="comment" placeholder="Ajouter un commentaire"></textarea>
+                        <button onclick="addComment()">Ajouter un commentaire</button>
+                        <div id="comments"></div>
+                    </div>
+                </div>
+    
+                <!-- Publicité -->
+                <div class="pub">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key': '725f10caa5ef71a6ad624c5109b76c38',
+                            'format': 'iframe',
+                            'height': 50,
+                            'width': 320,
+                            'params': {}
+                        };
+                        document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/725f10caa5ef71a6ad624c5109b76c38/invoke.js"></scr' + 'ipt>');
+                    </script>
+                </div>
+            </main>
+            <aside></aside>
+        </div>
+    </div>
+    
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+    
+    <!-- External JavaScript files -->
+    <script src="/js/asset.js" defer></script>
+    <script src="/js/script.js" defer></script>
+    <script src="/js/button.js" defer></script>
+    <script src="script/courscommentaire.js" defer></script>
+    <script src="/js/langue.js" defer></script>
+
+    <!-- Your external JavaScript file -->
+    <script src="details.js" defer></script>
+    <script src=""></script>
+</body>
+</html>

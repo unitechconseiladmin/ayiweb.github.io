@@ -1,0 +1,272 @@
+
+.translate{
+    height: 40px;
+    width:90%;
+    border: 1px solid orangered;
+    box-sizing: border-box;
+}
+.translate p{
+    font-size: 12px;
+}
+#google_translate_element {
+    display: inline-block;
+    margin-top: 1px; /* Marge en haut du widget */
+    margin-bottom: 1px; /* Marge en bas du widget */
+    padding: 5px; /* Espacement interne du widget */
+    border: 1px solid #ccc; /* Bordure du widget */
+    border-radius: 5px; /* Coins arrondis du widget */
+    background-color: #f9f9f9; /* Couleur de fond du widget */
+    font-size: 14px; /* Taille de la police du widget */
+    width: 100%; /* Largeur du widget Ã  100% */
+}
+.lang{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.lang select{
+  padding: 1px;
+}
+.lang .flag-icon{
+  height: 20px;
+  font-size: 20px;
+
+}
+.lang span{
+  font-size: 14px;
+}
+.video{
+    width: 100%;
+}
+.video iframe{
+    width: 100%;
+}
+
+
+h2{
+    color: blue;
+    text-align: center;
+    font-size: 16px;
+}
+p{
+    color: black;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+.stitre{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(16, 20, 221);
+}
+#details{
+    font-size: 18px;
+    text-align: justify;
+}
+
+#desc, #decEs, #descEn{
+  font-size: 18px;
+}
+
+.article{
+    padding: 20px;
+}
+.article img{
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+}
+img{
+    width: 100%;
+    
+}
+
+.article p img:hover {
+    z-index: 9;
+    transform: scale(2.1); /* Zoom in by 10% on hover */
+  }
+
+
+#details-title{
+    display: none;
+    text-align: center;
+    color: rgb(37, 37, 255);
+    font-size: 18px;
+}
+
+
+hr {
+border: 0;
+border-top: 1px solid #ddd;
+margin: 10px 0;
+}
+
+.commentSection {
+    margin-top: 20px;
+    display: none;
+}
+
+.commentSection input,
+.commentSection textarea,
+.commentSection button {
+    margin-bottom: 10px;
+}
+
+/* Style for the username input */
+.commentSection input[type="text"] {
+width: 100%;
+padding: 8px;
+margin-bottom: 10px;
+box-sizing: border-box;
+}
+
+/* Style for the comment textarea */
+.commentSection textarea {
+width: 100%;
+height: 80px;
+padding: 8px;
+margin-bottom: 10px;
+box-sizing: border-box;
+}
+.userComment{
+color: rgb(255, 196, 0);
+display: flex;
+align-items: center;
+overflow: hidden;
+}
+.userComment::after{
+content: "";
+display: block;
+clear: both;
+}
+.userComment i{
+font-size: 36px;
+border: 2px solid gray;
+width: 35px;
+height: 35px;
+border-radius: 50%;
+text-align: center;
+}
+.userComment span{
+    margin-left: 10px;
+color: black;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Style for the Add Comment button */
+.commentSection button {
+background-color: #4caf50;
+color: white;
+padding: 10px 15px;
+border: none;
+cursor: pointer;
+}
+
+.commentSection button:hover {
+background-color: #45a049;
+}
+
+/* Style for the comments container */
+.commentSection .comment {
+margin-top: 15px;
+}
+
+/* Style for individual comments */
+.commentSection .comment div {
+padding: 8px;
+border: 1px solid #ddd;
+margin-bottom: 8px;
+background-color: #f9f9f9;
+}
+
+/* Style for the username in comments */
+.commentSection .comment div strong {
+color: #555;
+}
+
+.comment > div {
+margin: 1px;
+padding: 10px;
+-webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+}
+.barlikebtn{
+    display: none;
+}
+.barlike{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.like{
+    margin-left: 10px;
+    border: 1px solid gray ;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.like button, .like .fa-comment{
+    background-color: rgb(16, 131, 255);
+    border: 0px;
+    padding: 5px;
+}
+.like span{
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.share {
+   margin-right: 5px;
+    background-color: rgb(0, 0, 255);
+    padding: 9px;
+    border-radius: 2px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none; /* Use 'none' instead of '0px' */
+    z-index: 109;
+  }
+  
+  /* Media Query pour les appareils mobiles */
+@media screen and (max-width: 600px) {
+    .article{
+        padding: 2px;
+    }
+    #google_translate_element {
+        font-size: 12px; /* Taille de police plus petite pour les appareils mobiles */
+        padding: 3px; /* Espacement interne rÃ©duit pour les appareils mobiles */
+    }
+
+    .stitre{
+        font-size: 20px;
+        text-align: center;
+        color: rgb(16, 20, 221);
+    }
+    h2{
+        color: blue;
+        text-align: center;
+        font-size: 18px;
+    }
+    #desc p{
+      font-size: 3.5vw;
+      color: rgb(0, 0, 0);
+    }
+    span{
+      color: rgb(0, 0, 0);
+      font-size: 3vw;
+    }
+    #details{
+      font-size: 14px;
+    }
+    #desc, #decEs, #descEn{
+      font-size: 12px;
+    }
+}

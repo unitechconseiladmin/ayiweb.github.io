@@ -1,0 +1,202 @@
+/* Sections */
+section {
+    margin-bottom: 20px;
+}
+button{
+    background: black;
+    color: white;
+    padding: 5px;
+    border: none;
+}
+
+
+
+
+
+/* Détails de l'article */
+.article {
+    background: white;
+    margin: 50px 5px 5px 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(0, 47, 255);
+    padding: 0px;
+
+}
+
+/* Image */
+#imageshow, #img {
+    width: 70%; /* Images responsives */
+    height: auto;
+    border-radius: 5px;
+    margin: auto;
+    display: block;
+    height: 250px;
+    border: #4CAF50 2px solid;
+    padding: 2px;
+}
+
+
+/* Langue */
+.lang {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.lang select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+/* Bar de boutons */
+.barlike {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1px;
+    padding: 0px;
+}
+
+.btncomment, .btnlike {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    margin: 5px;
+}
+.barlike .fa{
+    border: 1px solid; 
+    padding: 2px;
+}
+.barlike span{
+    border: 1px solid;
+    padding: 2px;
+    width: 20px;
+    height: 20px;
+    font-size: 4vw;
+    background: gay;
+    text-align: center;
+}
+
+.btnlike button {
+    display: flex;
+    padding: 1px;
+    margin-right: 3px;
+    background: none;
+    border: 1px solid pink;
+    cursor: pointer;
+    color: #ff0077; /* Couleur du bouton j'aime */
+}
+.share {
+    background-color: rgba(0, 128, 0, 0);
+    border: none;
+    color: green;
+    box-shadow: 0px 0px 5px 0px gray;
+    border-radius: 50%;
+    padding: 1px;
+    transition: all 0.3s ease; /* Animation pour tous les changements */
+    cursor: pointer; /* Changer le curseur lors du survol */
+}
+
+.share:hover {
+    background-color: rgba(0, 128, 0, 0.2); /* Ajouter une légère couleur verte lors du survol */
+    box-shadow: 0px 0px 10px 2px rgba(0, 128, 0, 0.5); /* Agrandir l'ombre */
+    transform: scale(1.1); /* Augmenter la taille du bouton */
+}
+
+.share:active {
+    background-color: rgba(0, 128, 0, 0.5); /* Accentuer la couleur verte lorsqu'il est cliqué */
+    transform: scale(0.9); /* Réduire légèrement la taille pour l'effet de clic */
+}
+
+.share .fa{
+    border: none;
+    font-size: 4vw;
+    padding: 1px;
+    margin: 1px;
+}
+
+.count {
+    margin-left: 5px;
+}
+
+/* Section de commentaires */
+.commentSection {
+    margin-top: 20px;
+}
+
+.commentSection textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    resize: none;
+}
+
+.commentSection button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#title{
+    color: blue;
+    font-size: 4vw;
+    text-align: center;
+}
+#soustitle{
+    color: orangered;
+    text-align: center;
+    font-size: 4vw;
+}
+.article p{
+    text-align: center;
+    font-size: 4vw;
+}
+#prix{
+    text-align: center;
+    color: red;
+    font-size: 4vw;
+}
+#details{
+    text-align: center;
+    color: black;
+    font-size: 4vw;
+}
+.article button{
+    display: block;
+    margin: auto;
+}
+/* Publicité */
+.pub {
+    background-color: #efefef;
+    text-align: center;
+    margin-top: 2px;
+    width: 100%;
+    border: 2px solid red;
+    overflow: hidden;
+}
+
+/* Commentaires */
+.comment {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.userComment {
+    font-weight: bold;
+}
+
+.comment p {
+    margin: 5px 0;
+}

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services informatiques - Création de sites web, formulaires et documents</title>
+
+    <!-- Meta description pour SEO -->
+    <meta name="description" content="Découvrez nos services informatiques incluant la création de sites web professionnels, de formulaires d'inscription personnalisés, ainsi que des documents informatiques tels que des guides et tutoriels.">
+
+    <!-- Mots-clés (keywords) pour SEO -->
+    <meta name="keywords" content="création de site web, développement web, formulaires, documents informatiques, guides, tutoriels, services informatiques">
+
+    <!-- Meta robots (autoriser ou non l'indexation) -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="Nos services informatiques - Création web, formulaires, documents">
+    <meta property="og:description" content="Nous offrons des services professionnels pour la création de sites web, formulaires personnalisés et documents informatiques.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" id="ogurl" content="">
+    <meta property="og:image" content="https://votre-site.com/preview.jpg" id="ogImage">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/back.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../css/css/all.css">
+    <link rel="stylesheet" href="../css/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="/css/formulaire.css">
+</head>
+<body>
+    <section class="body">
+        <h1>Pa disponible sou fòma sa</h1>
+    </section>
+    <section class="mobile">
+        <div class="container">
+            <div id="splash-screen"></div>
+            <menu id="nav"></menu>
+            <div class="alert"></div>
+            <div class="formulaire"></div>
+            <div class="placement">
+                <div class="usersdetails" id="userDetails"></div>
+            </div>
+
+            <div class="content">
+                <main>
+                    <!--Selectionner la langue de votre choix-->
+        
+                    <div class="lang">
+                        <select name="" id="langue">
+                            <option value="fr" class="flag-fr" data-country="france" selected>Français</option>
+                            <option value="us" class="flag-en" data-country="uk">Anglais</option>
+                            <option value="es" class="flag-es" data-country="spain">Espagnol</option>
+                        </select>
+                        <span id="selected-flag" class="flag flag-icon flag-icon-fr"></span>
+                        <span>Langue / Idioma</span>
+                    </div>
+                   
+                   
+        
+                  <h1 id="details-title" style="display: none;">Loading...</h1>
+                  <div id="details-container" class="article">
+                        
+                        <h2 id="gtitle" style="display: none;"></h2>
+                        <h1 id="stitre" class="stitre"></h1>
+                        <p id="details"></p>
+                        <div style="display: none;" class="video" id="videoContainer"></div>
+                        <a href="" id="imageshow"><img id="article-image" src="" alt=""></a>
+                        <div class="btn">
+                            <button> <i class="fa-brands fa-whatsapp"></i></i> <a href="https://whatsapp.com/channel/0029VadhmlpEAKWIRzYyWt0a" id="whatsapp">Abòne ak chanè Whatsapp</a></button>
+                            <p id="messages" style="display: none;">Accédez gratuitement en cliquant sur le lien suivant</p>
+                            <p id="messages2" style="display: none;">Pour nous aider à travailler, veuillez partager ce lien dans au moins 5 groupes.</p>
+                        </div>
+        
+                        <script>
+                            // Récupérer l'URL de l'image
+                            var imageUrl = document.getElementById('article-image').src;
+                        
+                            // Mettre à jour le contenu de la balise meta avec l'URL de l'image
+                            document.getElementById('ogurl').setAttribute('content', imageUrl);
+                        </script>
+                        <p id="message"></p>
+        
+                        <p id="desc"></p>
+                        <p id="descEs"></p>
+                        <p id="descEn"></p>
+        
+                        
+                        <button style="display: none;" onclick="courSuivant()">Cours Suivant</button>
+                        <!--Mes boutton-->
+                        <div class="barlike">
+                            <div class="barlike">
+                                <div class="btncomment like">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="count" id="commentcount"> 
+                                    </span>
+                                </div>
+                            
+                                <div class="btnlike like">
+                                    <button onclick="likebtn()">
+                                    <i class="fa fa-thumbs-up"></i>
+                                    </button>
+                                    <span id="likecount"></span>
+                                </div>
+                
+                                <div class="btndislike like">
+                                <button onclick="dislikebtn()">
+                                    <i class="fa fa-thumbs-down"></i>
+                                </button>
+                                <span id="dislikecount"></span>
+                                </div>
+                                <button onclick="share()" class="share"><i class="fa fa-whatsapp"></i></button>
+                               
+                            </div>
+                    
+                        </div>
+                  
+                    <!--espace commentaire-->
+                    <div class="commentSection">
+        
+                        <textarea id="comment" placeholder="Add a comment"></textarea>
+                        <button onclick="addComment()">Add Comment</button>
+                        <div class="comment" id="comments"></div>
+                    </div>
+                  </div>
+              </main>
+              <aside id="aside"></aside>
+            </div>
+        </div>
+    </section>
+       <!-- Pied de page -->
+
+     <!-- Include Firebase SDK -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+
+    <script src="/js/script.js" defer></script>
+    <script src="/js/button.js" defer></script>
+    <script src="/js/form.js" defer></script>
+    <script src="commentaire.js" defer></script>
+
+
+    <script>
+        const firebaseConfig = {
+  apiKey: "AIzaSyAQeHWr_vUiQmVVgJJ_cOF9qrCCLd7IJNc",
+  authDomain: "ayiweb.firebaseapp.com",
+  databaseURL: "https://ayiweb-default-rtdb.firebaseio.com",
+  projectId: "ayiweb",
+  storageBucket: "ayiweb.appspot.com",
+  messagingSenderId: "115054504556",
+  appId: "1:115054504556:web:ccd713ba01dd8f02830649"
+    };
+
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+        // Assurez-vous que le document est complètement chargé avant d'interagir avec les éléments
+        document.addEventListener("DOMContentLoaded", function () {
+    // Récupérez le paramètre "l" de l'URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const title = urlParams.get('l');
+
+    if (title) {
+        // Remplacez les underscores par des espaces dans le titre
+        const decodedTitle = decodeURIComponent(title.replace(/_/g, " "));
+
+        // Mettez à jour le contenu de la balise de titre avec le titre décodé
+        var titleElement = document.getElementById('dynamicTitle');
+        if (titleElement) {
+            titleElement.innerHTML = decodedTitle;
+            console.log(decodedTitle);
+        }
+
+        // Récupérez l'élément de l'image par son identifiant
+        var imgElement = document.getElementById("article-image");
+
+
+        // Récupérez la balise meta par son identifiant
+        var ogImageMeta = document.getElementById("ogImage");
+
+        // Assurez-vous que l'élément de l'image et la balise meta existent
+        if (imgElement && ogImageMeta) {
+            // Récupérez l'URL de l'image
+            var imgUrl = imgElement.src;
+            console.log(imgUrl);
+
+            // Mettez à jour le contenu de la balise meta avec l'URL de l'image
+            ogImageMeta.setAttribute("content", imgUrl);
+        }
+    }
+});
+
+
+// Récupérez l'élément de l'image par son identifiant
+var imgElement = document.getElementById("article-image");
+        
+
+        // Récupérez la balise meta par son identifiant
+        var ogImageMeta = document.getElementById("ogImage");
+
+        // Assurez-vous que l'élément de l'image et la balise meta existent
+        if (imgElement && ogImageMeta) {
+            // Récupérez l'URL de l'image
+            var imgUrl = imgElement.src;
+            console.log(imgUrl);
+
+            // Mettez à jour le contenu de la balise meta avec l'URL de l'image
+            ogImageMeta.setAttribute("content", imgUrl);
+        }
+    
+    </script>
+
+  
+  <!--<script src="/js/langue.js" defer></script>-->
+  <script>
+ 
+    
+    document.addEventListener("DOMContentLoaded", function() {
+    // Sélectionner l'élément de langue
+    var langueSelect = document.getElementById('langue');
+    
+    // Sélectionner la langue française par défaut
+    var defaultLangue = 'fr';
+    
+    // Mettre à jour la langue sélectionnée dans la liste déroulante
+    langueSelect.value = defaultLangue;
+    
+    // Déclencher manuellement l'événement onchange pour mettre à jour le contenu
+    var event = new Event('change');
+    langueSelect.dispatchEvent(event);
+});
+
+
+    const urlParams = new URLSearchParams(window.location.search);
+const title = urlParams.get('l');
+const titleWithoutUnderscores = title.replace(/_/g, " ");
+const decodedTitle = decodeURIComponent(titleWithoutUnderscores);
+console.log(decodedTitle);
+
+
+ // Retrieve the stored title from localStorage
+const storedTitle = localStorage.getItem('storedTitle');
+console.log(decodedTitle); // Outputs: Informatique
+
+// Déclaration de variables en dehors de la fonction
+var presentationKey;
+var presentationData; // Déclaration de presentationData dans une portée plus large
+
+// Référence à la base de données
+var presentationsRef = database.ref('Bolg/');
+
+// Événement onchange pour la liste déroulante de la langue
+document.getElementById('langue').onchange = function() {
+    // Valeur sélectionnée dans la liste déroulante
+    var selectedValue = this.value;
+
+    // Récupération des données de présentation depuis la base de données Firebase
+    presentationsRef.once('value', function(snapshot) {
+        var presentationsData = snapshot.val();
+
+        // Boucle à travers les données de présentation
+        for (var currentKey in presentationsData) {
+            presentationData = presentationsData[currentKey];
+            document.getElementById('splash-screen').style.display = 'none';
+            // Vérification si le titre correspond au titre décrypté
+            if (presentationData.Title === decodedTitle) {
+                // Récupération des éléments DOM
+                var detailsTitle = document.getElementById('details-title');
+                var h2 = document.getElementById('gtitle');
+                var videoContainer = document.getElementById('videoContainer');
+                var imageArticle = document.getElementById('article-image');
+                var imageshow = document.getElementById('imageshow');
+                var audio = document.getElementById('audio');
+                var youtube = document.getElementById('youtube');
+                var stitre = document.getElementById('stitre');
+                var details = document.getElementById('details');
+                var desc = document.getElementById('desc');
+                var msgs = document.getElementById('messages');
+                var msgs2 = document.getElementById('messages2');
+                var ogImageMeta = document.getElementById('ogImage');
+
+                // URL de base pour incorporer une vidéo YouTube
+                var youtubeEmbedUrl = 'https://www.youtube.com/embed/';
+                // Créer l'URL complète pour la vidéo YouTube
+                var youtubeUrl = youtubeEmbedUrl + presentationData.VideoId + '?rel=0';
+
+                // Mise à jour du contenu des éléments DOM
+                detailsTitle.textContent = presentationData.Title;
+                h2.textContent = presentationData.Title;
+                var iframe = document.createElement('iframe');
+                iframe.setAttribute('width', '560');
+                iframe.setAttribute('height', '315');
+                iframe.setAttribute('src', youtubeUrl);
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allowfullscreen', '');
+                videoContainer.innerHTML = ''; // Effacer le contenu précédent
+                videoContainer.appendChild(iframe);
+                imageArticle.src = presentationData.Image;
+                imageshow.href = presentationData.Image;
+                //audio.href = presentationData.Audio;
+                //youtube.href = presentationData.VideoId;
+                ogImageMeta.setAttribute('content', presentationData.Image);
+
+                // Mise à jour du contenu en fonction de la langue sélectionnée
+                switch (selectedValue) {
+                    case 'us':
+                        stitre.textContent = presentationData.Title || 'Pas encore disponible dans cette langue';
+                        details.innerHTML = presentationData.enDetails || 'Pas encore disponible dans cette langue';
+                        desc.innerHTML = presentationData.enDescription || 'Pas encore disponible dans cette langue';
+                        msgs.textContent='Accede gratis haciendo clic en el siguiente enlace';
+                        break;
+                    case 'es':
+                        stitre.textContent = presentationData.Title || 'Pas encore disponible dans cette langue';
+                        details.innerHTML = presentationData.esDetails || 'Pas encore disponible dans cette langue';
+                        desc.innerHTML = presentationData.esDescription || 'Pas encore disponible dans cette langue';
+                        msgs.textContent='Accede gratis haciendo clic en el siguiente enlace';
+                        msgs2.textContent='Para ayudarnos a trabajar, por favor comparte este enlace en al menos 5 grupos.';
+                        break;
+                    default:
+                        stitre.textContent = presentationData.Title || 'Pas encore disponible dans cette langue';
+                        details.innerHTML = presentationData.Details || 'Pas encore disponible dans cette langue';
+                        desc.innerHTML = presentationData.Description || 'Pas encore disponible dans cette langue';
+                        msgs.textContent='Accédez gratuitement en cliquant sur le lien suivant';
+                        msgs2.textContent='Accédez gratuitement en cliquant sur le lien suivant';
+                        break;
+                }
+
+                // Affichage de la section des commentaires
+                document.querySelector('.commentSection').style.display = 'block';
+
+                // Sortir de la boucle une fois que la correspondance est trouvée
+                break;
+            }
+        }
+    });
+};
+
+
+
+  </script>
+
+
+<script>
+
+
+function likebtn() {
+    console.log(decodedTitle);
+    var postRef = database.ref('Bolg/' + decodedTitle);
+    var likecount = document.getElementById('likecount');
+    var dislikecount = document.getElementById('dislikecount');
+
+    postRef.transaction(function (data) {
+        if (data) {
+            data.likes = (data.likes || 0) + 1;
+        } else {
+            data = { likes: 1, dislikes: 0 };
+        }
+        return data;
+    }, function (error, committed, snapshot) {
+        if (committed) {
+            updateCounts(likecount, dislikecount, snapshot.val());
+        } else {
+            console.error('Transaction failed:', error);
+        }
+    });
+}
+
+function dislikebtn() {
+    console.log(decodedTitle);
+    var postRef = database.ref('Bolg/'+ decodedTitle);
+    var likecount = document.getElementById('likecount');
+    var dislikecount = document.getElementById('dislikecount');
+
+    postRef.transaction(function (data) {
+        if (data) {
+            data.dislikes = (data.dislikes || 0) + 1;
+        } else {
+            data = { likes: 0, dislikes: 1 };
+        }
+        return data;
+    }, function (error, committed, snapshot) {
+        if (committed) {
+            updateCounts(likecount, dislikecount, snapshot.val());
+        } else {
+            console.error('Transaction failed:', error);
+        }
+    });
+}
+
+function updateCounts(likeCountElement, dislikeCountElement, data) {
+    console.log('Updating counts:', data);
+    likeCountElement.innerText = data.likes || 0;
+    dislikeCountElement.innerText = data.dislikes || 0;
+}
+
+// Ensure the elements exist
+window.onload = function() {
+    var likeCountElement = document.getElementById('likecount');
+    var dislikeCountElement = document.getElementById('dislikecount');
+    updateCounts(likeCountElement, dislikeCountElement, { likes: 0, dislikes: 0 });
+};
+ //----------------------fin button  like e dislike----------------------------------//
+ </script>
+
+</body>
+</html>
